@@ -7,12 +7,12 @@ plugins {
 
 android {
     namespace 'com.example.mvvmapplication'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.example.mvvmapplication"
         minSdk 21
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -42,7 +42,9 @@ dependencies {
     def androidx_version = "1.7.0"
     def dagger_hilt = "2.44"
     def retrofit_version = "2.9.0"
-
+    def lifecycle_version = "2.5.1"
+    def activity_lifecycle_version = "1.6.1"
+    def fragment_lifecycle_version = "1.5.5"
 
 
     // androidx library with constraint layout
@@ -57,6 +59,15 @@ dependencies {
     //dagger hilt
     implementation "com.google.dagger:hilt-android:$dagger_hilt"
     kapt "com.google.dagger:hilt-compiler:$dagger_hilt"
+
+
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.fragment:fragment-ktx:$fragment_lifecycle_version"
+    implementation "androidx.activity:activity-ktx:$activity_lifecycle_version"
+
+    // LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
 
 
     testImplementation 'junit:junit:4.13.2'
