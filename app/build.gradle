@@ -38,11 +38,18 @@ dependencies {
 
     def androidx_version = "1.7.0"
     def dagger_hilt = "2.44"
+    def retrofit_version = "2.9.0"
+
+
+
     // androidx library with constraint layout
     implementation "androidx.core:core-ktx:$androidx_version"
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation "com.google.android.material:material:$androidx_version"
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    //retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
 
     //dagger hilt
     implementation "com.google.dagger:hilt-android:$dagger_hilt"
